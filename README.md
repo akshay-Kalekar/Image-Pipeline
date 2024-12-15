@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# Project Title: Vite React TypeScript Drawing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+This project is a drawing application built with **Vite**, **React**, and **TypeScript**. It allows users to create drawings, work on multiple images, and save their work using various features. The application is styled with **Tailwind CSS** and utilizes a set of carefully chosen libraries for functionality and performance.
 
-Currently, two official plugins are available:
+## Features
+- Create and edit drawings on a canvas.
+- Save images using the File Saver library.
+- Switch between multiple images and retain data across canvases.
+- Modern and responsive UI designed with Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+Follow these steps to run the project locally:
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v16 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository-url.git
+   cd your-repository-folder
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+### Running the Application
+1. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+2. Open your browser and navigate to `http://localhost:5173`.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Libraries Used
+- **[react-canvas-draw](https://www.npmjs.com/package/react-canvas-draw):** Simplifies the implementation of drawing functionality.
+- **[file-saver](https://www.npmjs.com/package/file-saver):** Enables saving canvas drawings as images.
+- **[tailwindcss](https://tailwindcss.com):** Provides a utility-first approach to styling.
+- **[lucide-react](https://www.npmjs.com/package/lucide-react):** Used for incorporating modern, lightweight icons.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Challenges Faced
+### Understanding Library Documentation
+Initially, I explored **Fabric.js**, but the documentation was complex and difficult to follow. This led me to switch to **react-canvas-draw**, which was much easier to implement and integrate into the project.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Handling Multiple Images and Retaining Data
+One of the most significant challenges was implementing functionality to work on multiple images while retaining data for each canvas. Initially, switching between images caused overlapping canvas data. After extensive debugging, exploring Stack Overflow, and writing custom algorithms, I successfully resolved this issue. The solution involved isolating canvas states and partitioning data efficiently.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### TypeScript Integration
+Using TypeScript added an extra layer of complexity during development, especially when dealing with types for canvas operations, which were not well-documented. Additionally, I had to downgrade React from version 18 to 17 due to compatibility issues with some libraries. Careful dependency management and troubleshooting helped overcome these obstacles.
+
+## Conclusion
+This project was a rewarding experience that enhanced my skills in:
+- Debugging complex problems.
+- Using modern libraries for a seamless development experience.
+- Optimizing TypeScript usage for better type safety and maintainability.
+
+---
+I am confident that my ability to overcome technical challenges and deliver functional, user-friendly applications aligns with the expectations of your internship program. I look forward to bringing these skills and more to your team.
