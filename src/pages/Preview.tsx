@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ImagePreview from "../components/ImagePreview";
 import Toolkit from "../components/Toolkit";
 import UploadedImages from "../components/UploadedImages";
+import Navbar from "../components/Navbar";
 interface CanvasSaveData {
   
   pathData: string; 
@@ -65,6 +66,7 @@ const Preview = () => {
 
   return (
     <>
+    <Navbar/>
       <UploadedImages
         uploadFileRef={uploadFileRef}
         imgSrc={imgSrc}
