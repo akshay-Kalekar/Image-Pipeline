@@ -110,7 +110,7 @@ const Toolkit = ({
 
       <div className='border border-black shadow-md py-2  px-4 rounded-lg flex gap-2 w-fit h-full justify-center items-center'>
      
-      <div className="relative py-2 w-fit h-fit bg-gray-50">
+      <div className="relative py-2 w-fit h-fit hover:text-black " >
         <button
           onClick={toggleDropdown}
           className="flex items-center gap-2 border border-black rounded-lg px-4 py-2 hover:bg-gray-200 transition duration-200"
@@ -121,13 +121,13 @@ const Toolkit = ({
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute right-0 -top-[4.5rem] bg-white border border-gray-300 rounded-lg shadow-md z-10 w-40 ">
+          <div className="absolute right-0 -top-[4.5rem] bg-white dark:bg-[#1A1A27] dark:text-white  border border-gray-300 rounded-lg shadow-md z-10 w-40 ">
             <button
               onClick={() => {
                 downloadMasked()
                 toggleDropdown()
               }}
-              className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100 transition duration-200"
+              className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100 transition duration-200 dark:hover:text-black"
             >
               <ImageDown size={16} />
               <span className="text-sm font-medium">Masked Image</span>
@@ -137,7 +137,7 @@ const Toolkit = ({
                 downloadDrawn()
                 toggleDropdown()
               }}
-              className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100 transition duration-200"
+              className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100 transition duration-200 dark:hover:text-black"
             >
               <ImageDown size={16} />
               <span className="text-sm font-medium">Canvas</span>

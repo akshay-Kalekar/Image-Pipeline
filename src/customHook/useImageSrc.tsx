@@ -14,7 +14,7 @@ const useImageSrc = (uploadFileRef) => {
         };
 
         if (uploadFileRef.current) {
-            uploadFileRef.current.addEventListener('change', getImageSrc); // Listen for file changes
+            uploadFileRef.current.addEventListener('change', getImageSrc); 
         }
 
         return () => {
